@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div>
+    <img src="{% static 'images/myhw.jpeg' %}" alt="myhw" width="450px">
+    <h1 class="contents">About Django MTV</h1>
+    <h2 class="subtitle">: 2주차 과제!</h2>
+    <div>🦁MTV를 알아보자! (자전거 아님 주의)</div>
+      <ul>
+        {% for three in MTV %}    
+        <li>{{ three }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>🤓Model</div>
+     <p style="text-align:justify"> 
+      모델은 데이터베이스에 저장되는 데이터를 의미한다. 
+      <br>excel과 같은 표의 형태로 정리하여 데이터베이스에 넣는다고 생각하면 된다. 
+      <br>원래 DB를 다루기 위해서는 SQL이라는 언어를 알아야하지만, 
+      <br>장고는 이 SQL을 몰라도 DB 작업을 가능하게 해주는 ORM을 제공하기 때문에 공부할 내용이 훨씬 적다. </p>
+
+    <div>🍕Templates</div>
+    <p>
+      템플릿은 사용자에게 보여지는 부분이다. 
+      <br>html파일이 이 템플릿을 담당한다. 
+      <br>장고 템플릿 시스템 문법에 맞게 python문법을 활용하여 작성하면 되므로, 
+      <br>다른 작업들과 화면 디자인 작업을 분리하여 확장성을 극대화 시킬 수 있다. 
+      <br>즉, 보여지는 부분을 만드는 사람은 그 부분에만 집중하여 만들 수 있게 도와주는 역할을 한다.
+    </p>
+
+    <div>⚽View</div>
+    <p>
+      view는 웹 요청을 받고, 전달받은 데이터들을 해당 어플리케이션의 로직으로 가공하여, 
+      <br>그 결과를 템플릿에 보내준다. 데이터를 가공하는 처리를 해야한다 싶으면 뷰에서 함수를 작성하면 된다.
+    </p>
+
+{% endblock %}
