@@ -132,17 +132,16 @@ console.log("Q6 반복문 연습문제2");
 (Hint:console.log(" ")로 빈칸 표현)
 */
 for (let t=0; t<5; t++) {
-    for (let t=0; t<4; t++) {
-        let k = " "
-        for (let j=4; j>t; j--) {
-            k += " "
-         }
-        for (let i=0; i<=t; i++) {
+    let k = ""
+    for (let j=4; j>t; j--) {
+        k += " "
+        }
+    for (let i=0; i<=t; i++) {
         k += "*"  
         }
-         console.log(k)
+    console.log(k)
     }
-}
+
 console.log("======= 문제 구분선 =======");
 
 // Q7 반복문 연습3
